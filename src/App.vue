@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    子应用2
+    <button @click="getSession">获取缓存</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import store from '@/store/index'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return{
+
+    }
+  },
+  methods:{
+    getSession(){
+      console.log('name',localStorage.getItem('user'))
+      console.log('age',sessionStorage.getItem('age'));
+      console.log('sex',sessionStorage.getItem('sex'))
+      console.log(this.$store);
+      console.log('vuex-name',store.state.name)
+      console.log('vuex-count',store.state.count)
+      console.log('vuex-age',store.state.age)
+    }
   }
 }
 </script>
