@@ -9,7 +9,7 @@ export const asyncRoutes = [
     component: Layout,
     children: [
       {
-        path: '/declare',
+        path: 'declare',
         title: 'declare',
         component: () => import('../views/declare'),
         name: 'declare',
