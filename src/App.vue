@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="child">
     子应用2
     <button @click="getSession">获取缓存</button>
   </div>
@@ -7,7 +7,6 @@
 
 <script>
 
-import store from '@/store/index'
 export default {
   name: 'App',
   data(){
@@ -17,13 +16,7 @@ export default {
   },
   methods:{
     getSession(){
-      console.log('name',localStorage.getItem('user'))
-      console.log('age',sessionStorage.getItem('age'));
-      console.log('sex',sessionStorage.getItem('sex'))
-      console.log(this.$store);
-      console.log('vuex-name',store.state.name)
-      console.log('vuex-count',store.state.count)
-      console.log('vuex-age',store.state.age)
+
     }
   }
 }

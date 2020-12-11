@@ -9,7 +9,7 @@ export const asyncRoutes = [
     component: Layout,
     children: [
       {
-        path: 'declare',
+        path: '/declare',
         title: 'declare',
         component: () => import('../views/declare'),
         name: 'declare',
@@ -30,7 +30,7 @@ export const asyncRoutes = [
 const createRouter = () => new Router({
   routes: asyncRoutes,
   mode: 'history',
-  base: !window.__POWERED_BY_QIANKUN__ ? '' : 'vue2',
+  base: !window.__POWERED_BY_QIANKUN__ ? '' : 'child',
 })
 
 const router = createRouter()
